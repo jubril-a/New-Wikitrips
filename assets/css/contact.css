@@ -315,6 +315,9 @@ h2:not(.details h2) {
 }
 .form-box__image {
   background-color: #397dd6;
+  background-image: url(../images/contact-form-2.jpg);
+  background-size: cover;
+  background-position: right;
 }
 @media (max-width: 45rem) {
   .form-box__image {

@@ -217,6 +217,9 @@ h2:not(.details h2) {
 
     &__image {
         background-color: variables.$primary-color-1;
+        background-image: url(../images/contact-form-2.jpg);
+        background-size: cover;
+        background-position: right;
 
         @media (max-width: 45rem) {
             min-height: 15rem;

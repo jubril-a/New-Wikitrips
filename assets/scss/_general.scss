@@ -1,0 +1,72 @@
+@use 'variables';
+
+/* Utilities */
+.constraint {
+    max-width: 72rem;
+    margin-inline: auto;
+}
+
+.center-content {
+    display: grid;
+    place-items: center;
+}
+
+.px-1 {
+    padding-inline: 1rem;
+}
+
+.section {
+    padding: 2.5rem calc(.7rem + 5vw);
+
+    @media (min-width: 51rem) {
+        padding-block: 5rem;      
+    }
+
+    @media (min-width: 72rem) {
+        padding-inline: 0;
+    }
+
+    &.form_section, &.faq-section {
+        padding-top: 0;
+    }
+    
+}
+
+.hero {
+    padding-top: 115px;
+}
+
+//session
+.session {
+    background-color: rgb(44, 66, 5);
+    color: #fff;
+    text-align: center;
+
+    h2 {
+        max-width: 45rem;
+        text-wrap: balanced;
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 1.2rem;
+        opacity: .8;
+        margin-block: .75rem 2rem;
+        
+        @media (min-width: 40rem) {
+            margin-block: 1rem 2.5rem;
+        }
+    }
+
+    a {
+        background-color: variables.$primary-color-2;
+        color: rgb(44, 66, 5);
+        font-weight: 500;
+        padding: 1rem;
+        transition: background-color 1s, color 1s;
+
+        &:hover {
+            background-color: rgba(172, 255, 28, 0.548);
+        } 
+    }
+}

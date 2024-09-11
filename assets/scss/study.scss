@@ -1,0 +1,219 @@
+@use 'resets';
+@use 'variables';
+@use 'general';
+@use 'navbar';
+@use 'footer';
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.hero {
+    width: 100vw;
+    min-height: 640px;
+    background-image: url(../images/university-2.jpeg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 680px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 3rem 2rem;
+
+    @media (max-width: 35rem) {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 1.4222rem + 1.7778vw, 3rem);
+        margin-bottom: .5rem;
+    }
+}
+
+h2 {
+    font-size: clamp(1.2rem, 1.0213rem + 2.1277vw, 2.3rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+
+    @media (max-width: 40rem) {
+        grid-template-columns: 1fr;
+    }
+
+    p {
+        color: rgb(54, 53, 53);
+        margin-bottom: 1.5rem;
+    }
+
+    .important {
+        font-weight: 600;
+    }
+
+    a {
+        background-color: variables.$primary-color-1;
+        padding: .75rem 1.25rem;
+        color: #fff;
+
+        &:hover {
+            background-color: variables.$primary-color-2;
+            color: #000;
+            font-weight: 600;
+        }
+    }
+
+    &-image {
+        background-color: variables.$primary-color-1;
+        aspect-ratio: 1 / 1;
+
+        @media (min-width: 40rem) AND (max-width: 57.5rem) {
+            aspect-ratio: auto;
+            height: 100%;
+        }
+
+        @media (max-width: 40rem) {
+            order: 2;
+            aspect-ratio: 1 / .5;
+        }
+    }
+
+    &-cnts {
+        @media (min-width: 40rem) AND (max-width: 57.5rem) {
+            padding-top: 1rem;
+        }        
+    }
+}
+
+[class$="-description"] {
+    font-size: 1rem;
+    color: rgb(54, 53, 53);
+    line-height: 1.4;
+    text-wrap: balance;
+}
+
+.exams {
+    &-wrapper {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &-cnts {
+        max-width: 680px;
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 3rem;
+
+        > * {
+            flex: 20rem 1 0;
+        }
+    }
+
+    a {
+        color: variables.$primary-color-1;
+        text-decoration: underline;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    h3 {
+        margin-bottom: .35rem;
+    }
+
+    .exam {
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: #fff;
+
+        &:hover {
+            border: 1px solid variables.$primary-color-1;
+            color: variables.$primary-color-1;
+        }
+    }
+}
+
+.packages {
+    &-cnts {
+        background: linear-gradient(180deg, #03cdfd 0%, #397dd6 100%);
+        position: relative;
+        padding: 3rem 2rem;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url(../images/geometric-bg.jpg);
+            background-size: 75%;
+            opacity: 0.02;
+        }
+
+        p {
+            max-width: 680px;
+        }
+    }
+}
+
+.package {
+    max-width: 480px;
+    background-color: rgba(35, 131, 255, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: inherit;
+
+    &:hover {
+        border: 1px solid variables.$primary-color-1;
+        color: variables.$primary-color-1;
+    }
+
+    h3 {
+        margin-bottom: .25rem;
+    }
+}
+
+.list-wrapper {
+    display: flex;
+    padding-block: 3rem;
+    gap: 3rem 2rem;
+
+    @media (max-width: 920px) {
+        flex-direction: column;
+    }
+
+    @media (min-width: 1024px) {
+        padding: 4rem; 
+        gap: 3rem;     
+    }
+}
+
+.packages-list {
+    display: grid;
+    gap: 1rem;
+    flex: auto 0 .8;
+
+    @media (max-width: 960px) {
+        order: -1;
+    }
+}
+
+.packages-image {
+    background-color: variables.$primary-color-1;
+    flex: auto 1 1;
+
+    @media (max-width: 960px) {
+        min-height: 16rem;
+    }
+}

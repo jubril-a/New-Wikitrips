@@ -68,7 +68,7 @@ li {
 }
 .session h2 {
   max-width: 45rem;
-  text-wrap: balanced;
+  text-wrap: balance;
 }
 .session p {
   font-weight: 500;
@@ -428,7 +428,7 @@ h2:not(.details h2) {
 }
 .form-box__image {
   background-color: #397dd6;
-  background-image: url(../images/contact-form-2.jpg);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/contact-form-2.jpg) no-repeat center center;
   background-size: cover;
   background-position: right;
 }

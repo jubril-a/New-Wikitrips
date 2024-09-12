@@ -218,7 +218,8 @@ h2:not(.details h2) {
 
     &__image {
         background-color: variables.$primary-color-1;
-        background-image: url(../images/contact-form-2.jpg);
+        //background-image: url(../images/contact-form-2.jpg);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/contact-form-2.jpg) no-repeat center center;
         background-size: cover;
         background-position: right;
 

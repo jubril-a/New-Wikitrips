@@ -12,7 +12,7 @@ p {
 .hero {
     width: 100vw;
     min-height: 640px;
-    background-image: url(../images/university-2.jpeg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../images/university-2.jpeg) no-repeat center center;
     background-size: cover;
     color: #fff;
     text-align: center;
@@ -20,17 +20,18 @@ p {
 
 .hero-content {
     max-width: 680px;
-    background-color: rgba(0, 0, 0, 0.6);
     padding: 3rem 2rem;
 
     @media (max-width: 35rem) {
         text-align: left;
     }
+}
 
-    h1 {
-        font-size: clamp(2rem, 1.4222rem + 1.7778vw, 3rem);
-        margin-bottom: .5rem;
-    }
+h1 {
+    font-size: clamp(2rem, 1.4222rem + 1.7778vw, 3rem);
+    font-weight: 800;
+    margin-bottom: .5rem;
+    color: variables.$primary-color-2;
 }
 
 h2 {
@@ -131,17 +132,27 @@ h2 {
     h3 {
         margin-bottom: .35rem;
     }
+}
 
-    .exam {
-        border: 1px solid rgba(0, 0, 0, 0.25);
-        padding: 1rem;
-        border-radius: 8px;
-        background-color: #fff;
+.exam {
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    background-color: #fff;
 
-        &:hover {
-            border: 1px solid variables.$primary-color-1;
-            color: variables.$primary-color-1;
+    &:hover {
+        border: 1px solid variables.$primary-color-1;
+        color: variables.$primary-color-1;
+
+        img {
+            filter: grayscale(0);
         }
+    }
+
+    img {
+        height: 20px;
+        margin-bottom: .7rem;
+        filter: grayscale(.7);
     }
 }
 
@@ -173,6 +184,11 @@ h2 {
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.2);
     color: inherit;
+
+    i {
+        font-size: 16px;
+        margin-left: 8px;
+    }
 
     &:hover {
         border: 1px solid variables.$primary-color-1;

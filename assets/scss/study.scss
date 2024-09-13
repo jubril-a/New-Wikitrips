@@ -1,5 +1,4 @@
 @use 'resets';
-@use 'variables';
 @use 'general';
 @use 'navbar';
 @use 'footer';
@@ -19,7 +18,7 @@ p {
 }
 
 .hero-content {
-    max-width: 680px;
+    max-width: 690px;
     padding: 3rem 2rem;
 
     @media (max-width: 35rem) {
@@ -72,7 +71,6 @@ h2 {
     }
 
     &-image {
-        background-color: variables.$primary-color-1;
         aspect-ratio: 1 / 1;
 
         @media (min-width: 40rem) AND (max-width: 57.5rem) {
@@ -226,8 +224,9 @@ h2 {
 }
 
 .packages-image {
-    background-color: variables.$primary-color-1;
-    flex: auto 1 1;
+    flex: 50% 1 1;
+    background-color: #03cdfd;
+    max-height: 500px;
 
     @media (max-width: 960px) {
         min-height: 16rem;

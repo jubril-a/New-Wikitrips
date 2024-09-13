@@ -1,7 +1,4 @@
-
-
 @use 'resets';
-@use 'variables';
 @use 'general';
 @use 'navbar';
 @use 'footer';
@@ -83,7 +80,6 @@ h2 {
     }
 
     &-image {
-        background-color: #fff;
         aspect-ratio: 1 / 1;
 
         @media (min-width: 45rem) AND (max-width: 57.5rem) {

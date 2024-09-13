@@ -1,5 +1,4 @@
 @use 'resets';
-@use 'variables';
 @use 'general';
 @use 'navbar';
 @use 'footer';
@@ -126,7 +125,7 @@ h1 {
 }
 
 [class^="details-"] {
-    background-color: #d6e6f2;
+    background-color: variables.$primary-color-1;
     border-radius: .5rem;
     overflow: hidden;
 }
@@ -144,7 +143,7 @@ h1 {
 
     p {
         line-height: 1.4;
-        color: rgba(0, 0, 0, .75);
+        color: rgba(255, 255, 255, 0.85);
     }
 
     &:last-child {
@@ -173,6 +172,7 @@ h1 {
 .detail-body {
     h3 {
         font-weight: 600;
+        color: #fff;
     }
 }
 

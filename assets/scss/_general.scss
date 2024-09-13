@@ -1,4 +1,6 @@
-@use 'variables';
+/* Variables */
+$primary-color-1: #397dd6;
+$primary-color-2: #acff1c;
 
 /* Utilities */
 .constraint {
@@ -32,11 +34,23 @@
     
 }
 
+.img-container {
+
+    img {
+        object-fit: cover;
+        height: 100%;
+        min-width: 100%;
+    }
+}
+
 .hero {
     padding-top: 115px;
 }
 
-//session
+/* Navigation Bar */
+
+
+/* Session Booking */
 .session {
     background-color: rgb(44, 66, 5);
     color: #fff;

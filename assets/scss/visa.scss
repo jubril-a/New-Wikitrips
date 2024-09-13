@@ -1,3 +1,5 @@
+
+
 @use 'resets';
 @use 'variables';
 @use 'general';
@@ -119,15 +121,13 @@ h2 {
     font-size: 1.1rem;
     border-radius: 16px;
     position: relative;
-
+    flex: 400px 1 1;
+    padding: 2.5rem 2rem 5rem;
 
     h3 {
         font-size: 1.5rem;
         margin-bottom: .75rem;
     } 
-
-    flex: 400px 1 1;
-    padding: 2.5rem 2rem 5rem;
 
     &-first {
         background-color: variables.$primary-color-1;
@@ -158,8 +158,102 @@ h2 {
 }
 
 // main visa
-.main-visa {
+
+.visas {
     h2 {
-        max-width: 520px;
+        max-width: 640px;
+        margin-bottom: 4rem;
+
+        span {
+            font-weight: 400;
+        }
+    }
+}
+
+.other-visa {
+    h2 {
+        padding-top: 5rem;
+    }
+}
+
+.main-visa-list {
+    display: flex;
+    gap: 6rem;
+    flex-wrap: wrap;
+    padding-inline: 4rem;
+
+    > * {
+        flex: 100% 0 0;
+    }
+}
+
+.visa {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+
+    .visa-image {
+        background-color: variables.$primary-color-1;
+        height: 100%;  
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: -.5px;
+        margin-bottom: .25rem;
+        
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .visa-description {
+        max-width: 480px;
+        padding-block: 1rem;
+    }
+
+    a {
+        color: variables.$primary-color-1;
+        text-decoration: underline;
+
+
+        &:hover {
+            color: red;
+        }
+    }
+}
+
+.middle {
+    order: 2;
+}
+
+.other-visa-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-inline: 4rem;
+
+    .other-visa {
+        flex: min(270px, 100%) 1 0;
+    }
+
+    .visa-image {
+        background-color: variables.$primary-color-1;
+        aspect-ratio: 2 / 3;
+        margin-bottom: .5rem;
+    }
+
+    a {
+        font-weight: 600;
+        font-size: 1.1rem;
+        letter-spacing: -.3px;
+        color: rgba(0, 0, 0, 0.9);
+
+        &:hover {
+            color: variables.$primary-color-1;
+        }
     }
 }

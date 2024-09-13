@@ -374,4 +374,85 @@ h2 {
   mix-blend-mode: darken;
 }
 
+.visas h2 {
+  max-width: 640px;
+  margin-bottom: 4rem;
+}
+.visas h2 span {
+  font-weight: 400;
+}
+
+.other-visa h2 {
+  padding-top: 5rem;
+}
+
+.main-visa-list {
+  display: flex;
+  gap: 6rem;
+  flex-wrap: wrap;
+  padding-inline: 4rem;
+}
+.main-visa-list > * {
+  flex: 100% 0 0;
+}
+
+.visa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.visa .visa-image {
+  background-color: #397dd6;
+  height: 100%;
+}
+.visa h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.25rem;
+}
+.visa p {
+  font-size: 1.1rem;
+}
+.visa .visa-description {
+  max-width: 480px;
+  padding-block: 1rem;
+}
+.visa a {
+  color: #397dd6;
+  text-decoration: underline;
+}
+.visa a:hover {
+  color: red;
+}
+
+.middle {
+  order: 2;
+}
+
+.other-visa-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-inline: 4rem;
+}
+.other-visa-list .other-visa {
+  flex: min(270px, 100%) 1 0;
+}
+.other-visa-list .visa-image {
+  background-color: #397dd6;
+  aspect-ratio: 1/1;
+  margin-bottom: 0.5rem;
+}
+.other-visa-list a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: -0.3px;
+  color: rgba(0, 0, 0, 0.9);
+}
+.other-visa-list a:hover {
+  color: #397dd6;
+}
+
 /*# sourceMappingURL=visa.css.map */

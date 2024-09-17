@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'general';
 
 // navbar
 .bar__wrapper {
@@ -7,6 +7,8 @@
     inset: 0 0 auto;
     z-index: 100;
     background-color: #fff;
+    max-height: 100vh;
+    overflow-y: auto;
 }
 
 .topbar {
@@ -21,7 +23,7 @@
     }
 
     a {
-        color: variables.$primary-color-2;
+        color: general.$primary-color-2;
 
         &:hover {
             text-decoration: underline;
@@ -33,6 +35,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: .65rem 1rem;
 
     .logo {
@@ -45,7 +48,7 @@ nav {
         font-size: 1rem;
 
         &:hover {
-            color: variables.$primary-color-1;
+            color: general.$primary-color-1;
         }
     }
 }
@@ -61,6 +64,17 @@ nav {
 
     @media (max-width: 40rem) {
         display: none;
+        gap: 0;
+        flex-direction: column;
+        order: 3;
+        width: 100%;
+        padding: 1.5rem;
+
+        .navlink {
+            display: block;
+            padding-block: 1rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
     }
 }
 
@@ -79,26 +93,35 @@ nav {
 
 
 .services {
-    .services-dropdown {
+    [data-state=collapsed] {
         display: none;
     }
 
-    &:hover {
-        .services-dropdown {
+    @media (min-width: 40rem) {
+       [data-state=expanded] {
             display: flex;
-        }
+        } 
     }
+    
 }
 
 
 .services-dropdown {
-    padding-block: 2rem;
-    border-radius: 12px;
-    min-width: 630px;
-    position: fixed;
-    right: 2rem;
-    
+    padding-block: 1rem 2rem;
     background-color: #eeeeee;
+    margin-top: 1rem;
+
+    @media (min-width: 40rem) {
+        padding-block: 2rem;
+        border-radius: 12px; 
+        min-width: 630px;
+        position: fixed;
+        right: 2rem;
+
+        .service-link {
+            padding: 1rem;
+        }
+    }
 
     > * {
         padding-inline: 2rem;
@@ -114,14 +137,14 @@ nav {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
+    padding-block: 1rem;
     border-radius: 8px;
 
     &:hover {
         background-color: #f9f9f9;
         
         .first-word {
-            color: variables.$primary-color-1;
+            color: general.$primary-color-1;
         }
     }
 
@@ -142,7 +165,9 @@ nav {
 }
 
 .main-services {
-    border-right: 1px solid rgba(89, 99, 110, 0.267);
+    @media (min-width: 40rem) {
+        border-right: 1px solid rgba(89, 99, 110, 0.267);      
+    }  
 }
 
 .other-services {
@@ -158,7 +183,7 @@ nav {
     }
     
     a:hover {
-        color: variables.$primary-color-1;
+        color: general.$primary-color-1;
     }
 }
 

@@ -74,7 +74,7 @@ $primary-color-2: #acff1c;
     }
 
     a {
-        background-color: variables.$primary-color-2;
+        background-color: $primary-color-2;
         color: rgb(44, 66, 5);
         font-weight: 500;
         padding: 1rem;

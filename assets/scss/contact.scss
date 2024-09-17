@@ -81,7 +81,7 @@ h1 {
 
 //contact
 .prehead {
-    color: variables.$primary-color-1;
+    color: general.$primary-color-1;
     font-weight: 600;
     font-size: 1.25rem;
     margin-bottom: .5rem;
@@ -112,7 +112,6 @@ h1 {
 }
 
 .contact-info {
-    font-family: "Raleway", sans-serif;
     font-size: 1.2rem;
     display: grid;
     gap: 1rem;   
@@ -125,7 +124,7 @@ h1 {
 }
 
 [class^="details-"] {
-    background-color: variables.$primary-color-1;
+    background-color: general.$primary-color-1;
     border-radius: .5rem;
     overflow: hidden;
 }
@@ -217,7 +216,7 @@ h2:not(.details h2) {
     }
 
     &__image {
-        background-color: variables.$primary-color-1;
+        background-color: general.$primary-color-1;
         //background-image: url(../images/contact-form-2.jpg);
         background: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/contact-form-2.jpg) no-repeat center center;
         background-size: cover;
@@ -316,7 +315,7 @@ h2:not(.details h2) {
         text-decoration: underline;
 
         &:hover {
-            color: variables.$primary-color-2;
+            color: general.$primary-color-2;
         }
     }
 }
@@ -342,7 +341,7 @@ h2:not(.details h2) {
     margin-inline: auto;
 
     &:hover {
-        border-top: 1px solid variables.$primary-color-1;
+        border-top: 1px solid general.$primary-color-1;
     }
 
     &__question {
@@ -361,7 +360,7 @@ h2:not(.details h2) {
     border-top: 1px solid rgba(57, 125, 214, 0.65);
 
     .faq__question {
-        color: variables.$primary-color-1;
+        color: general.$primary-color-1;
     }
 
     .faq__answer {

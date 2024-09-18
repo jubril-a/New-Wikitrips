@@ -1,0 +1,14 @@
+@use 'resets';
+@use 'general';
+@use 'navbar';
+@use 'footer';
+
+.hero {
+    height: 100vh;
+}
+
+main {
+    background-color: orangered;
+    width: 100vw;
+    height: 100%;
+}

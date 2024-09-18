@@ -1,0 +1,283 @@
+html {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Variables */
+/* Utilities */
+.constraint {
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+.center-content {
+  display: grid;
+  place-items: center;
+}
+
+.px-1 {
+  padding-inline: 1rem;
+}
+
+.section {
+  padding: 2.5rem calc(0.7rem + 5vw);
+}
+@media (min-width: 51rem) {
+  .section {
+    padding-block: 5rem;
+  }
+}
+@media (min-width: 72rem) {
+  .section {
+    padding-inline: 0;
+  }
+}
+.section.form_section, .section.faq-section {
+  padding-top: 0;
+}
+
+.img-container img {
+  object-fit: cover;
+  height: 100%;
+  min-width: 100%;
+}
+
+.hero {
+  padding-top: 115px;
+}
+
+/* Navigation Bar */
+/* Session Booking */
+.session {
+  background-color: rgb(44, 66, 5);
+  color: #fff;
+  text-align: center;
+}
+.session h2 {
+  max-width: 45rem;
+  text-wrap: balance;
+}
+.session p {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  opacity: 0.8;
+  margin-block: 0.75rem 2rem;
+}
+@media (min-width: 40rem) {
+  .session p {
+    margin-block: 1rem 2.5rem;
+  }
+}
+.session a {
+  background-color: #acff1c;
+  color: rgb(44, 66, 5);
+  font-weight: 500;
+  padding: 1rem;
+  transition: background-color 1s, color 1s;
+}
+.session a:hover {
+  background-color: rgba(172, 255, 28, 0.548);
+}
+
+.bar__wrapper {
+  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  background-color: #fff;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
+.topbar {
+  background-color: black;
+  padding: 0.65rem 0;
+}
+.topbar p {
+  color: #fff;
+  text-align: center;
+}
+.topbar a {
+  color: #acff1c;
+}
+.topbar a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.65rem 1rem;
+}
+nav .logo {
+  width: 9rem;
+}
+nav .navlink {
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+}
+nav .navlink:hover {
+  color: #397dd6;
+}
+
+.navlinks {
+  display: flex;
+  gap: 2rem;
+}
+.navlinks .caret {
+  height: 10px;
+  margin-left: 4px;
+}
+@media (max-width: 40rem) {
+  .navlinks {
+    display: none;
+    gap: 0;
+    flex-direction: column;
+    order: 3;
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .navlinks .navlink {
+    display: block;
+    padding-block: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+.mobile-nav {
+  display: none;
+  width: 1.5rem;
+}
+.mobile-nav img:last-child {
+  display: none;
+}
+@media (max-width: 40rem) {
+  .mobile-nav {
+    display: block;
+  }
+}
+
+.services [data-state=collapsed] {
+  display: none;
+}
+@media (min-width: 40rem) {
+  .services [data-state=expanded] {
+    display: flex;
+  }
+}
+
+.services-dropdown {
+  padding-block: 1rem 2rem;
+  background-color: #eeeeee;
+  margin-top: 1rem;
+}
+@media (min-width: 40rem) {
+  .services-dropdown {
+    padding-block: 2rem;
+    border-radius: 12px;
+    min-width: 630px;
+    position: fixed;
+    right: 2rem;
+  }
+  .services-dropdown .service-link {
+    padding: 1rem;
+  }
+}
+.services-dropdown > * {
+  padding-inline: 2rem;
+}
+.services-dropdown a {
+  color: #59636e;
+  font-size: 15px;
+}
+
+.service-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-radius: 8px;
+}
+.service-link:hover {
+  background-color: #f9f9f9;
+}
+.service-link:hover .first-word {
+  color: #397dd6;
+}
+.service-link img {
+  width: 32px;
+  opacity: 0.9;
+}
+.service-link p {
+  line-height: 1.3;
+}
+.service-link .first-word {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (min-width: 40rem) {
+  .main-services {
+    border-right: 1px solid rgba(89, 99, 110, 0.267);
+  }
+}
+
+.other-services {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+.other-services span {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.other-services a:hover {
+  color: #397dd6;
+}
+
+footer {
+  background-color: #010c16;
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero {
+  height: 100vh;
+}
+
+main {
+  background-color: orangered;
+  width: 100vw;
+  height: 100%;
+}
+
+/*# sourceMappingURL=tours.css.map */

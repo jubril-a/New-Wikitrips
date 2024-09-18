@@ -1,22 +1,11 @@
 @use 'resets';
 @use 'general';
 @use 'navbar';
+@use 'subhero';
 @use 'footer';
 
-.hero {
-    width: 100vw;
-    min-height: 640px;
+.hero::before {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../images/toronto.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-h1 {
-    color: general.$primary-color-2;
-    font-size: clamp(2rem,1.4222rem + 1.7778vw,3rem);
-    max-width: 600px;
-    line-height: 1.2;
-    font-weight: 800;
-    text-wrap: balance;
 }
 
 h2 {

@@ -1,0 +1,41 @@
+@use 'general';
+
+.hero {
+    min-height: 640px;
+    display: grid;
+    align-content: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        min-height: 640px;
+        background-color: general.$primary-color-1;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../images/airplane.jpg) no-repeat center center;
+        background-size: cover;
+    }
+}
+
+main {
+    max-width: 640px;
+    position: relative;
+    z-index: 10;
+    height: fit-content;
+}
+
+h1 {
+    font-size: clamp(2rem, 1.4222rem + 1.7778vw, 3rem);
+    font-weight: 800;
+    margin-bottom: .5rem;
+    color: general.$primary-color-2;
+    line-height: 1.1;
+}
+
+.subheading {
+    font-size: 1.25rem;
+    color: #fff;
+    opacity: .85;
+    line-height: 1.4;
+}

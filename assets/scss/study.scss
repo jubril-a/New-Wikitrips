@@ -1,6 +1,7 @@
 @use 'resets';
 @use 'general';
 @use 'navbar';
+@use '_subhero';
 @use 'footer';
 
 p {
@@ -8,29 +9,8 @@ p {
     line-height: 1.2;
 }
 
-.hero {
-    width: 100vw;
-    min-height: 640px;
+.hero::before {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../images/university-2.jpeg) no-repeat center center;
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-}
-
-.hero-content {
-    max-width: 690px;
-    padding: 3rem 2rem;
-
-    @media (max-width: 35rem) {
-        text-align: left;
-    }
-}
-
-h1 {
-    font-size: clamp(2rem, 1.4222rem + 1.7778vw, 3rem);
-    font-weight: 800;
-    margin-bottom: .5rem;
-    color: general.$primary-color-2;
 }
 
 h2 {

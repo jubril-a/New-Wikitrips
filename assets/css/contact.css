@@ -204,6 +204,7 @@ nav .navlink:hover {
     min-width: 630px;
     position: fixed;
     right: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   .services-dropdown .service-link {
     padding: 1rem;
@@ -464,7 +465,7 @@ h2:not(.details h2) {
 }
 .form-box__image {
   background-color: #397dd6;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/contact-form-2.jpg) no-repeat center center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/contact-form-2.jpg) no-repeat center center;
   background-size: cover;
   background-position: right;
 }

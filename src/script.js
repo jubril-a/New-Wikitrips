@@ -38,3 +38,9 @@ services.addEventListener('click', (e) => {
         dropdown.setAttribute("data-state", "expanded")
     }
 })
+
+document.querySelector('body').addEventListener('click', (e) => {
+    if (!(dropdown.contains(e.target)) && services != e.target) {
+        dropdown.setAttribute("data-state", "collapsed")
+    }
+})

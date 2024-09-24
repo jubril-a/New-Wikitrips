@@ -4,6 +4,7 @@
     min-height: 640px;
     display: grid;
     align-content: center;
+    padding-inline: 2rem;
 
     &::before {
         content: "";

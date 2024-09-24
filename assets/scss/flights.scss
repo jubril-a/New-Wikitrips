@@ -25,6 +25,12 @@ h2 {
     padding: 2.5rem 1.5rem;
     flex: 300px 1 0;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: transform .35s;
+
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    }
 }
 
 .destinations_wrapper {
@@ -48,16 +54,16 @@ h2 {
     display: flex;
     overflow-x: scroll;
     gap: 1rem;
-
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
         display: none;
     }
 
-    @media (min-width: 300px) {
+    @media (min-width: 760px) {
         margin-inline: 24px;
     }
 }
@@ -68,6 +74,10 @@ h2 {
 
     &:hover {
         box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+
+        img {
+            transform: scale(1.35);
+        }
     }
 
     h4 {
@@ -78,6 +88,13 @@ h2 {
     &_image {
         aspect-ratio: 16 / 9;
         background-color: general.$primary-color-1;
+        overflow: hidden;
+
+        img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 1s;
+        }
     }
 
     &_info {
@@ -103,6 +120,10 @@ h2 {
     &-controls {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 760px) {
+            display: none;
+        }
     }
 
     .prev {

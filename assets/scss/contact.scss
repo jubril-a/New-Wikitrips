@@ -268,13 +268,14 @@ h2:not(.details h2) {
     }
 
     [type="submit"] {
-        background-color: rgb(10, 82, 177);
+        background-color: general.$primary-color-1;
         color: #fff;
         font-size: 1rem;
         font-weight: 600;
 
         &:hover {
-            background-color: rgba(10, 82, 177, .85);
+            background-color: general.$primary-color-2;
+            color: #000;
         }
     }
 }

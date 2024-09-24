@@ -37,6 +37,11 @@ li {
   place-items: center;
 }
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 .px-1 {
   padding-inline: 1rem;
 }
@@ -68,7 +73,6 @@ li {
   padding-top: 115px;
 }
 
-/* Navigation Bar */
 /* Session Booking */
 .session {
   background-color: rgb(44, 66, 5);
@@ -76,8 +80,11 @@ li {
   text-align: center;
 }
 .session h2 {
+  font-size: clamp(1.2rem, 1.0213rem + 2.1277vw, 2.3rem);
   max-width: 45rem;
   text-wrap: balance;
+  line-height: 1.1;
+  letter-spacing: 1;
 }
 .session p {
   font-weight: 500;
@@ -93,13 +100,13 @@ li {
 }
 .session a {
   background-color: #acff1c;
-  color: rgb(44, 66, 5);
   font-weight: 500;
   padding: 1rem;
-  transition: background-color 1s, color 1s;
+  color: #000;
+  transition: color 0.5s, background-color 0.5s;
 }
 .session a:hover {
-  background-color: rgba(172, 255, 28, 0.548);
+  background-color: #fff;
 }
 
 .bar__wrapper {
@@ -308,6 +315,8 @@ h1 {
 footer {
   background-color: #010c16;
   padding: 1rem;
+}
+footer a, footer p {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -333,6 +342,11 @@ h2 {
   padding: 2.5rem 1.5rem;
   flex: 300px 1 0;
   border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: transform 0.35s;
+}
+.reason:hover {
+  transform: scale(1.01);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
 }
 
 .destinations_wrapper {
@@ -358,11 +372,12 @@ h2 {
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 .destinations::-webkit-scrollbar {
   display: none;
 }
-@media (min-width: 300px) {
+@media (min-width: 760px) {
   .destinations {
     margin-inline: 24px;
   }
@@ -375,6 +390,9 @@ h2 {
 .destination:hover {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
 }
+.destination:hover img {
+  transform: scale(1.35);
+}
 .destination h4 {
   font-size: 1.15rem;
   font-weight: 500;
@@ -382,6 +400,12 @@ h2 {
 .destination_image {
   aspect-ratio: 16/9;
   background-color: #397dd6;
+  overflow: hidden;
+}
+.destination_image img {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 1s;
 }
 .destination_info {
   padding: 1.5rem 1rem 2rem;
@@ -404,6 +428,11 @@ h2 {
 .slider-controls {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 760px) {
+  .slider-controls {
+    display: none;
+  }
 }
 .slider .prev {
   transform: rotate(180deg);

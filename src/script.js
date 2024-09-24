@@ -2,7 +2,9 @@ var mobileNav = document.querySelector(".mobile-nav")
 var faqs = document.querySelectorAll(".faq")
 var navlinks = document.querySelector(".navlinks")
 var services = document.querySelector(".services-navlink")
-let dropdown = document.querySelector('.services-dropdown');
+let dropdown = document.querySelector('.services-dropdown')
+let sliderControls = document.querySelectorAll(".slider-buttons")
+
 
 mobileNav.addEventListener('click', () => {
     let navState = mobileNav.getAttribute("data-state")
@@ -44,3 +46,15 @@ document.querySelector('body').addEventListener('click', (e) => {
         dropdown.setAttribute("data-state", "collapsed")
     }
 })
+
+for (let button of sliderControls) {
+    button.addEventListener('click', () => {
+        let slider = document.getElementById(button.getAttribute('data-controls'))
+        let sliderWidth = slider.offsetWidth;
+        if (button.classList.contains("prev")) {
+            slider.scrollLeft -= sliderWidth
+        } else {
+            slider.scrollLeft += sliderWidth
+        }
+    })
+}

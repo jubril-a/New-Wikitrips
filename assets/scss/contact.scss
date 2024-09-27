@@ -1,7 +1,6 @@
 @use 'resets';
 @use 'general';
 @use 'navbar';
-@use 'footer';
 
 //hero section
 .hero {
@@ -211,13 +210,13 @@ h2:not(.details h2) {
 
     p {
         margin-bottom: 1rem;
-        color: rgba(0, 0, 0, .8);
+        color: rgba(0, 0, 0, .8); 
         font-style: italic;
     }
 
     &__image {
         background-color: general.$primary-color-1;
-        background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/contact-form-2.jpg) no-repeat center center;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/contact-form-2.jpg) no-repeat center center;
         background-size: cover;
         background-position: right;
 

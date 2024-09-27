@@ -1,7 +1,6 @@
 @use 'resets';
 @use 'general';
 @use 'navbar';
-@use 'footer';
 
 .constraint-720 {
     max-width: 720px;
@@ -36,7 +35,7 @@
 
 .intro {
     display: flex;
-    margin-top: 2rem;
+    margin-block: 2rem;
     gap: 2rem;
     align-items: center;
 
@@ -48,6 +47,7 @@
         img {
             height: 100%;
             object-fit: cover;
+            min-width: 100%;
         }
     }
 
@@ -64,8 +64,12 @@
         }
     }
 
-    @media (min-width: 720px) {
-        padding-block: 4rem;
+    @media (min-width: 760px) {
+        padding-block: 2rem;
+
+        > * {
+            flex: 440px 1 1;
+        }
     }
 
     .lead {
@@ -90,7 +94,7 @@
     margin-top: 2rem;
 }
 
-.list {
+.list, .h3, table {
     margin-top: 1rem;    
 }
 
@@ -102,7 +106,12 @@
 }
 
 .list {
-   margin-inline: 1rem; 
+   margin-inline: 1rem;
+
+   li {
+        list-style-type: square;
+        list-style-position: inside;
+   }
 }
 
 .grid-list {
@@ -117,13 +126,16 @@
     @media (min-width: 640px) {
         grid-template-columns: 1fr 1fr 1fr;
     }
-
-    li {
-        list-style-type: square;
-        list-style-position: inside;
-    }
 }
 
 .term {
     font-weight: 600;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
 }

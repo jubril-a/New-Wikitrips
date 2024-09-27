@@ -2,7 +2,6 @@
 @use 'general';
 @use 'navbar';
 @use 'subhero';
-@use 'footer';
 
 .hero::before {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../images/toronto.jpg) no-repeat center center;

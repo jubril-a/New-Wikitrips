@@ -109,6 +109,17 @@ li {
   background-color: #fff;
 }
 
+footer {
+  background-color: #010c16;
+  padding: 1rem;
+}
+footer a, footer p {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer a:hover {
+  color: #397dd6;
+}
+
 .bar__wrapper {
   box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -272,14 +283,6 @@ nav .navlink:hover {
   color: #397dd6;
 }
 
-footer {
-  background-color: #010c16;
-  padding: 1rem;
-}
-footer a, footer p {
-  color: rgba(255, 255, 255, 0.7);
-}
-
 .constraint-720 {
   max-width: 720px;
   margin-inline: auto;
@@ -312,7 +315,7 @@ footer a, footer p {
 
 .intro {
   display: flex;
-  margin-top: 2rem;
+  margin-block: 2rem;
   gap: 2rem;
   align-items: center;
 }
@@ -324,6 +327,7 @@ footer a, footer p {
 .intro-image img {
   height: 100%;
   object-fit: cover;
+  min-width: 100%;
 }
 @media (max-width: 760px) {
   .intro {
@@ -336,9 +340,12 @@ footer a, footer p {
     width: 100%;
   }
 }
-@media (min-width: 720px) {
+@media (min-width: 760px) {
   .intro {
-    padding-block: 4rem;
+    padding-block: 2rem;
+  }
+  .intro > * {
+    flex: 440px 1 1;
   }
 }
 .intro .lead {
@@ -361,7 +368,7 @@ footer a, footer p {
   margin-top: 2rem;
 }
 
-.list {
+.list, .h3, table {
   margin-top: 1rem;
 }
 
@@ -374,6 +381,10 @@ footer a, footer p {
 
 .list {
   margin-inline: 1rem;
+}
+.list li {
+  list-style-type: square;
+  list-style-position: inside;
 }
 
 .grid-list {
@@ -391,13 +402,17 @@ footer a, footer p {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-.grid-list li {
-  list-style-type: square;
-  list-style-position: inside;
-}
 
 .term {
   font-weight: 600;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
 }
 
 /*# sourceMappingURL=subpages.css.map */

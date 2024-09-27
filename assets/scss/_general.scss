@@ -91,3 +91,16 @@ $primary-color-2: #acff1c;
         } 
     }
 }
+
+footer {
+    background-color: #010c16;
+    padding: 1rem;
+
+    a, p {
+       color: rgba(255, 255, 255, 0.7); 
+    }
+
+    a:hover {
+        color: $primary-color-1;
+    }
+}

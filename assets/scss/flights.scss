@@ -1,0 +1,148 @@
+@use 'resets';
+@use 'general';
+@use 'navbar';
+@use '_subhero';
+
+h2 {
+    font-size: clamp(1.2rem, 1.0213rem + 2.1277vw, 2.3rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-wrap: balance;
+
+    @media (min-width: 1024px) {
+        margin-bottom: 3rem;
+    }
+}
+
+.reasons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.reason {
+    padding: 2.5rem 1.5rem;
+    flex: 300px 1 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    transition: transform .35s;
+
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
+    }
+}
+
+.destinations_wrapper {
+    padding-top: 0;
+
+    h3 {
+        margin-bottom: .5rem;
+        font-size: 1.5rem;
+        color: rgba(0, 0, 0, 0.8);
+        font-weight: 600;
+        letter-spacing: -.5;
+    }
+}
+
+.destination_intro {
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.destinations {
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media (min-width: 760px) {
+        margin-inline: 24px;
+    }
+}
+
+.destination {
+    flex: min(320px, 100%) 0 0 ;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+
+        img {
+            transform: scale(1.35);
+        }
+    }
+
+    h4 {
+        font-size: 1.15rem;
+        font-weight: 500;
+    }
+
+    &_image {
+        aspect-ratio: 16 / 9;
+        background-color: general.$primary-color-1;
+        overflow: hidden;
+
+        img {
+            height: 200px;
+            object-fit: cover;
+            transition: transform 1s;
+        }
+    }
+
+    &_info {
+        padding: 1.5rem 1rem 2rem;
+        background-color: #fff;
+    }
+}
+
+.international {
+    margin-bottom: 3rem;
+}
+
+.slider {
+    display: grid;
+    align-items: center;
+
+    > * {
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+        height: min-content;
+    }
+
+    &-controls {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 760px) {
+            display: none;
+        }
+    }
+
+    .prev {
+        transform: rotate(180deg);
+    }
+
+    &-buttons {
+        width: 48px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ececec;
+        }
+    }
+}
+
+

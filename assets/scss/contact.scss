@@ -1,0 +1,371 @@
+@use 'resets';
+@use 'general';
+@use 'navbar';
+
+//hero section
+.hero {
+    background: linear-gradient(1deg, #03cdfd 0%, rgb(57,125,214) 100%);
+    position: relative;
+    padding-top: 115px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/geometric-bg.jpg);
+    background-size: 75%;
+    opacity: .05;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    .heading-wrapper {
+        padding-block: calc(1rem + 5vw);
+        z-index: 20;
+    }
+
+    @media (min-width: 51rem) {
+        flex-direction: row;
+        gap: 4rem;
+        align-items: center;
+    }
+}
+
+
+.hero-image {
+    z-index: 20;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    @media (max-width: 51rem) {
+        order: -1;
+        min-width: 100vw;
+
+        img {
+            width: 100%;
+            max-height: 400px;
+        }
+    }
+
+    @media (min-width: 51rem) {
+        width: 320px;
+        height: 400px;
+        align-self: end;
+
+        img {
+            object-position: top right;
+        }
+    }   
+    
+}
+
+
+h1 {
+    font-size: clamp(1.5rem, 1.4rem + 1.7vw, 2.5rem);
+    line-height: 1.18;
+    font-weight: 700;
+    letter-spacing: -0.5;
+
+    @media (min-width: 356px) {
+        display: grid;
+    }
+}
+
+//contact
+.prehead {
+    color: general.$primary-color-1;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.details {
+    
+    h2 {
+        font-weight: 500;
+        margin-bottom: 2.5rem;
+        max-width: 47.5rem;
+        margin-inline: auto;
+        font-size: clamp(1.2rem, .63rem + 2vw, 2rem);
+        line-height: 1.2;
+        text-wrap: pretty;
+    
+        span {
+            font-weight: 800;
+            font-size: clamp(1.2rem, .63rem + 2vw, 2.1rem);
+        }
+    }
+
+    @media (min-width: 41rem) {
+        h2, .prehead {
+            text-align: center;            
+        }
+    }
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    display: grid;
+    gap: 1rem;   
+
+    @media (min-width: 41rem) {
+        grid-template-columns: .8fr 1fr;
+        max-width: 720px;
+        margin-inline: auto;
+    }
+}
+
+[class^="details-"] {
+    background-color: general.$primary-color-1;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.details-2 {
+    padding-bottom: 2.5rem;
+
+    .detail {
+        padding-top: 2.5rem;
+    }
+}
+
+.detail {
+    padding-inline: 2rem;
+
+    p {
+        line-height: 1.4;
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    &:last-child {
+        padding-top: 1.5rem;
+    }
+
+    [alt*="icon"] {
+        height: 2rem;
+        margin-bottom: .5rem;
+    }
+}
+
+.details-1 {
+    padding-block: 2.5rem;
+
+    @media (max-width: 41rem) {
+        display: flex;
+        flex-wrap: wrap;
+
+        .detail {
+            padding-block: 0 1rem;
+        }
+    }
+}
+
+.detail-body {
+    h3 {
+        font-weight: 600;
+        color: #fff;
+    }
+}
+
+.map {
+    aspect-ratio: 3 / 1.5;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+       object-fit: cover;
+       height: 100%;
+       transition: transform 1s;
+
+       &:hover {
+        transform: scale(2);
+       }
+    }
+}
+
+
+
+//Contact Form
+h2:not(.details h2) {
+    margin-bottom: .4rem;
+    font-size: clamp(1.5rem,1.0213rem + 2.1277vw,2.5rem);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    font-weight: 600;
+}
+
+.form-box {
+    display: grid;
+
+    @media (min-width: 45rem) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    p {
+        margin-bottom: 1rem;
+        color: rgba(0, 0, 0, .8); 
+        font-style: italic;
+    }
+
+    &__image {
+        background-color: general.$primary-color-1;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/contact-form-2.jpg) no-repeat center center;
+        background-size: cover;
+        background-position: right;
+
+        @media (max-width: 45rem) {
+            min-height: 15rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__form {
+        padding: 3rem 2rem;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+
+        @media (min-width: 64rem) {
+            padding: 5rem 4rem;
+        }
+    }
+
+    label {
+        line-height: 2;
+        font-weight: 500;
+        color: rgba(0, 0, 0, .8);
+        font-size: 1.1rem;
+    }
+
+    input {
+        height: 2.5rem;
+    }
+
+    textarea {
+        height: 10rem;
+    }
+
+    input, textarea {
+        width: 100%;
+        background-color: rgba(57, 125, 214, .25);
+        border: 0;
+
+        &:hover {
+            background-color: rgba(57, 125, 214, 0.4);
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid rgba(57, 125, 214, 0.4);
+            background-color: #fff;
+        }
+    }
+
+    [type="submit"] {
+        background-color: general.$primary-color-1;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+
+        &:hover {
+            background-color: general.$primary-color-2;
+            color: #000;
+        }
+    }
+}
+
+.form {
+    display: grid;
+    gap: .65rem;
+}
+
+//faq
+.faq-section {
+    p {
+        max-width: 47.5rem;
+    }
+}
+
+.faq__head-parent {
+    background: linear-gradient(180deg, #03cdfd 0%, #397dd6 100%);
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/geometric-bg.jpg);
+        background-size: 75%;
+        opacity: .02;
+    }
+}
+
+.faq__head {
+    padding: 2rem;
+    position: relative;
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+            color: general.$primary-color-2;
+        }
+    }
+}
+
+.faq__body {
+    position: relative;
+    z-index: 5;
+    padding: 2.5rem;
+
+    @media (max-width: 42rem) {
+        padding-inline: 1rem;
+    }
+
+    @media (max-width: 27rem) {
+        padding-inline: 0;
+    }
+}
+
+.faq {
+    border-top: 1px solid rgba(0, 0, 0, .2);
+    padding: 1rem;
+    max-width: 50rem;
+    margin-inline: auto;
+
+    &:hover {
+        border-top: 1px solid general.$primary-color-1;
+    }
+
+    &__question {
+        font-weight: 600;
+        margin-bottom: .5rem;
+        font-size: 1.1rem;
+        color: rgba(0, 0, 0, 0.8);
+    }
+
+    &__answer {
+        display: none;
+    }
+}
+
+.active {
+    border-top: 1px solid rgba(57, 125, 214, 0.65);
+
+    .faq__question {
+        color: general.$primary-color-1;
+    }
+
+    .faq__answer {
+        display: block;
+        color: rgba(0, 0, 0, 0.8);
+        line-height: 1.5;
+        max-width: 80ch;
+    }
+}

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="src/script.js" defer></script>
+    <script src="src/form.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -26,7 +27,7 @@
                                     <img src="assets/images/passport.png" alt="">
                                     <p><span class="first-word">Visa</span><br>Hassle-free visa services</p>
                                 </a>
-                                <a href="/tours.html" class="service-link">
+                                <a href="/tour.html" class="service-link">
                                     <img src="assets/images/tour.png" alt="">
                                     <p><span class="first-word">Tours</span><br>Discover exciting destinations</p>
                                 </a>
@@ -112,13 +113,11 @@
         </section>
         <section class="section form_section">
             <div class="form-box constraint">
-                <div class="form-box__image">
-                    
-                </div>
+                <div class="form-box__image"></div>
                 <div id="message" class="form-box__form">
                     <h2>Send us a Message</h2>
                     <p>We'll get back to you within 24 hrs</p>
-                    <form action="https://formspree.io/f/movagnny" method="POST" class="form">
+                    <form action="/message" class="form">
                         <label for="">Fullname<br><input type="text" name="Fullname" id="" required></label>
                         <label for="">Phone<br><input type="phone" name="Phone Number" id="" required></label>
                         <label for="">Email<br><input type="email" name="Email" id="" required></label>
@@ -126,7 +125,7 @@
                             <label for="">Type your message</label><br>
                             <textarea name="Message" id="" value="type your message ...." required></textarea>
                         </div>
-                        <input type="submit" value="Send Message">
+                        <input type="submit" value="Send Message" class="formSubmit">
                     </form>
                 </div>
             </div>
@@ -198,5 +197,6 @@
             </div>
         </footer>
     </div>
+    <!--action="https://formspree.io/f/movagnny"-->
 </body>
 </html>

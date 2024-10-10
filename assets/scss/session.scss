@@ -1,6 +1,7 @@
 @use 'resets';
 @use 'general';
 @use 'navbar';
+@use 'alert';
 
 .span-2 {
     grid-column: 1 / -1;
@@ -114,7 +115,7 @@ h1 {
             background-color: rgba(57, 125, 214, 0.4);
         }
 
-        &:focus {
+        &:focus:not([type=submit]) {
             outline: none;
             border: 1px solid rgba(57, 125, 214, 0.4);
             background-color: #fff;

@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6d54de810b.js" crossorigin="anonymous"></script>
     <script src="src/script.js" defer></script>
+    <script src="src/form.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -28,7 +29,7 @@
                                     <img src="assets/images/passport.png" alt="">
                                     <p><span class="first-word">Visa</span><br>Hassle-free visa services</p>
                                 </a>
-                                <a href="/tours.html" class="service-link">
+                                <a href="/tour.html" class="service-link">
                                     <img src="assets/images/tour.png" alt="">
                                     <p><span class="first-word">Tours</span><br>Discover exciting destinations</p>
                                 </a>
@@ -69,27 +70,27 @@
                 
             </div>
             <div class="form-content center-content">
-                <form action="https://formspree.io/f/mjkbneag" method="post" class="session-form">
+                <form action="/session" class="form session-form">
                     <label for="firstname"><span class="important">* </span>First Name<br>
-                        <input id="firstname" name="firstname" type="text" required>
+                        <input id="firstname" name="First Name" type="text" required>
                     </label>
                     <label for="lastname"><span class="important">* </span>Last Name<br>
-                        <input id="lastname" name="lastname" type="text" required>
+                        <input id="lastname" name="Last Name" type="text" required>
                     </label>
                     <label for="phone"><span class="important">* </span>Phone Number<br>
-                        <input id="phone" name="phone" type="phone" required>
+                        <input id="phone" name="Phone Number" type="phone" required>
                     </label>
                     <label for="email">Email Address<br>
-                        <input id="email" name="email" type="email">
+                        <input id="email" name="Email Address" type="email">
                     </label>
                     <label for="date"><span class="important">* </span>Preferred Date<br>
-                        <input id="date" type="date" name="" id="" required>
+                        <input id="date" type="date" name="Preferred Date" id="date" required>
                     </label>
                     <label for="time">Preferred Time<br>
-                        <input id="time" type="time">
+                        <input name="Time" id="time" type="time" min="10:00" max="16:00">
                     </label>
                     <label for="duration">Session Duration<br>
-                        <select name="duration" id="duration">
+                        <select name="Session Duration" id="duration">
                             <option class="o-5" hidden disabled selected value> -- Select an Option -- </option>
                             <option value="15 Mins">15 Mins</option>
                             <option value="30 Mins">30 Mins</option>
@@ -98,7 +99,7 @@
                         </select>
                     </label>
                     <label for="preference"><span class="important">* </span>Session Medium<br>
-                        <select name="preference" id="preference" required>
+                        <select name="Preferred Venue" id="preference" required>
                             <option class="o-5" hidden disabled selected value> -- Select an Option -- </option>
                             <option value="Online">Online</option>
                             <option value="Physical">Physical</option>
@@ -106,13 +107,13 @@
                     </label>
                     <label for="topic" class="span-2"><span class="important">* </span>Session Topic
                         <span class="sublabels">What would you like to discuss during the session?</span>
-                        <textarea name="session_topic" id="topic" required></textarea>
+                        <textarea name="Session Topic" id="topic" required></textarea>
                     </label>
                     <label for="comment" class="span-2">Additional Comments
                         <span class="sublabels">Do you have any additional comments or requests?</span>
-                        <textarea name="comment" id="comment"></textarea>
+                        <textarea name="Additional Comment" id="comment"></textarea>
                     </label>
-                    <input type="submit" value="BOOK A SESSION">
+                    <input type="submit" value="BOOK A SESSION" class="formSubmit">
                 </form>
             </div>
         </main>
@@ -123,5 +124,11 @@
             </div>
         </footer>
     </div>
+    <script>
+        // [**INFO**] Session Booking Form Validation: set minimum date)
+        var dateInput = document.querySelector("#date")
+        let now = new Date()
+        dateInput.setAttribute("min", now.toISOString().split('T')[0])
+    </script>
 </body>
 </html>

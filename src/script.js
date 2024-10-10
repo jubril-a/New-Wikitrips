@@ -1,11 +1,11 @@
 var mobileNav = document.querySelector(".mobile-nav")
-var faqs = document.querySelectorAll(".faq")
 var navlinks = document.querySelector(".navlinks")
 var services = document.querySelector(".services-navlink")
 let dropdown = document.querySelector('.services-dropdown')
+var faqs = document.querySelectorAll(".faq")
 let sliderControls = document.querySelectorAll(".slider-buttons")
 
-
+// [**INFO**] navbar (all)
 mobileNav.addEventListener('click', () => {
     let navState = mobileNav.getAttribute("data-state")
     if (navState == "expanded") {
@@ -21,14 +21,6 @@ mobileNav.addEventListener('click', () => {
         dropdown.setAttribute("data-state", "collapsed")
         navlinks.style.display = "flex"
     }
-})
-
-faqs.forEach(faq => {
-    faq.addEventListener('click', () => {
-        let active = document.querySelector('.active')
-        active.classList.remove("active")
-        faq.classList.add("active")
-    })
 })
 
 services.addEventListener('click', (e) => {
@@ -47,6 +39,17 @@ document.querySelector('body').addEventListener('click', (e) => {
     }
 })
 
+
+// [**INFO**] faq dropdown (contact.html)
+faqs.forEach(faq => {
+    faq.addEventListener('click', () => {
+        let active = document.querySelector('.active')
+        active.classList.remove("active")
+        faq.classList.add("active")
+    })
+})
+
+// [**INFO**] slider (visa.html)
 for (let button of sliderControls) {
     button.addEventListener('click', () => {
         let slider = document.getElementById(button.getAttribute('data-controls'))

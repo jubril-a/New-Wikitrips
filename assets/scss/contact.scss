@@ -1,6 +1,7 @@
 @use 'resets';
 @use 'general';
 @use 'navbar';
+@use 'alert';
 
 //hero section
 .hero {
@@ -254,12 +255,14 @@ h2:not(.details h2) {
         width: 100%;
         background-color: rgba(57, 125, 214, .25);
         border: 0;
+        font-size: 1rem;
+        font-family: inherit;
 
         &:hover {
             background-color: rgba(57, 125, 214, 0.4);
         }
 
-        &:focus {
+        &:focus:not([type="submit"]) {
             outline: none;
             border: 1px solid rgba(57, 125, 214, 0.4);
             background-color: #fff;

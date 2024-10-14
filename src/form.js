@@ -26,6 +26,7 @@ function showAlert(h1, message) {
 // [**INFO**] Form Submission (session.html, contact.html)
 form.addEventListener('submit', (e) => {
     e.preventDefault()
+    // start spinning
     let apiUrl = 'https://mailsender-99zz.onrender.com'
     let formData = {}
 
@@ -48,6 +49,7 @@ form.addEventListener('submit', (e) => {
             return {h1: "Something Went Wrong", message: ""}
         }
     }).then((response) => {
+        // stop spinning
         showAlert(response.h1, response.message)
     })
 })

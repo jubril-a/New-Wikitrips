@@ -360,7 +360,7 @@ h1 {
     padding-top: 30px;
 }
 span {
-    color: #8cca24;
+    color: #acff1c;
 }
 .t1 {
     color: rgb(255, 255, 255);
@@ -699,6 +699,7 @@ h2 {
 
 .lag {
     border: 1px solid rgb(160, 160, 160);
+    border-top: 0;
     width: 300px;
     height: 130px;
     top: 50%;
@@ -826,11 +827,12 @@ i {
     padding-bottom: 20px;
   }
   .easy-1 a {
-    background-color: #8cca24;
-    color: #ffffff;
+    background-color: #acff1c;
+    color: #000;
     font-weight: 500;
     padding: 10px;
     transition: color .5s, background-color .5s;
+    border: 1px solid #acff1c;
   }
   .easy-1 a:hover {
     background-color: #006283;

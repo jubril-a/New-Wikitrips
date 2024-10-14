@@ -26,8 +26,7 @@ function showAlert(h1, message) {
 // [**INFO**] Form Submission (session.html, contact.html)
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-    // [EDIT: Change apiUrl to backend url]
-    let apiUrl = 'http://127.0.0.1:8080'
+    let apiUrl = 'https://mailsender-99zz.onrender.com'
     let formData = {}
 
     for (let input of form.elements) {

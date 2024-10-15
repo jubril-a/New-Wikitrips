@@ -27,6 +27,8 @@ function showAlert(h1, message) {
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     // start spinning
+    document.querySelector('.loading-submit').classList.add('loading');
+
     let apiUrl = 'https://mailsender-99zz.onrender.com'
     let formData = {}
 
@@ -50,6 +52,7 @@ form.addEventListener('submit', (e) => {
         }
     }).then((response) => {
         // stop spinning
+        document.querySelector('.loading-submit').classList.remove('loading');
         showAlert(response.h1, response.message)
     })
 })

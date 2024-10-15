@@ -270,10 +270,10 @@ h2:not(.details h2) {
     }
 
     [type="submit"] {
-        background-color: general.$primary-color-1;
         color: #fff;
-        font-size: 1rem;
+        font-size: 0.85rem;
         font-weight: 600;
+        margin: 0;
 
         &:hover {
             background-color: general.$primary-color-2;
@@ -286,6 +286,43 @@ h2:not(.details h2) {
     display: grid;
     gap: .65rem;
 }
+
+.loading-submit {
+    background-color: general.$primary-color-1;
+    display: grid;
+    place-items: center;
+    height: 2.5rem;
+
+    &.loading {
+        input {
+            display: none;
+        }
+
+        .loader {
+            display: inline-block;
+        }
+    }
+}
+
+.loader {
+    width: 36px;
+    height: 36px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: none;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
 
 //faq
 .faq-section {

@@ -362,15 +362,16 @@ h2:not(.details h2) {
 .faq__body {
     position: relative;
     z-index: 5;
-    padding: 2.5rem;
+    padding: 2.5rem calc(.7rem + 5vw);
+    
 
-    @media (max-width: 42rem) {
-        padding-inline: 1rem;
-    }
+    // @media (max-width: 42rem) {
+    //     padding-inline: 1rem;
+    // }
 
-    @media (max-width: 27rem) {
-        padding-inline: 0;
-    }
+    // @media (max-width: 27rem) {
+    //     padding-inline: 0;
+    // }
 }
 
 .faq {

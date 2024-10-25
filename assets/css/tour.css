@@ -941,7 +941,7 @@ input {
     margin-bottom: 20px;
     font-size: 17px;
 }
-#any {
+#additional {
     width: min(100%);
     height: 100px;
     font-family:'Poppins', sans-serif;
@@ -1004,4 +1004,58 @@ select {
 hr {
     margin-bottom: 10px;
 }
+
+[type=submit] {
+  background-color: #397dd6;
+  color: #fff;
+  font-weight: 600;
+  font-size: .85rem;
+  margin: 0;
+  border: none;
+  height: 100%;
+}
+
+[type=submit]:hover {
+  background-color: #acff1c;
+  color: #000;
+}
+
+.loading-submit {
+  background-color: #397dd6;
+  display: grid;
+  place-items: center;
+  height: 2.5rem;
+  margin-top: 2rem;
+
+  &.loading {
+      input {
+          display: none;
+      }
+
+      .loader {
+          display: inline-block;
+      }
+  }
+}
+
+.loader {
+  width: 36px;
+  height: 36px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: none;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+} 
+
     

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="/src/script.js" defer></script>
+    <script src="src/form.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 </head>
@@ -346,40 +347,40 @@
     <section class="plan">
         <h2 class="pyc">Plan your customized package.</h2>
         <div class="form-plan">
-            <form action="">
+            <form action="/tour" class="form">
                <div class="namee">
                     <div class="fnna">
                         <div class="fna">
                             <label for="fname" class="fn">First Name</label>
                         </div>
                         <div class="fna1">
-                            <input type="text" name="fn" placeholder="First Name">
+                            <input id="fname" type="text" name="First Name" placeholder="First Name" required>
                         </div>
                     </div>
                     <div class="lnna">
                         <div class="fna">
-                            <label for="fname" class="fn">Last Name</label>
+                            <label for="lname" class="fn">Last Name</label>
                         </div>
                         <div class="fna1">
-                            <input type="text" name="fn" placeholder="Last Name">
+                            <input id="lname" type="text" name="Last Name" placeholder="Last Name" required>
                         </div>
                     </div>
                </div>
                <div class="namee">
                     <div class="fnna">
                         <div class="fna">
-                            <label for="fname" class="fn">Email Address</label>
+                            <label for="email" class="fn">Email Address</label>
                         </div>
                         <div class="fna1">
-                            <input type="email" name="fn" placeholder="Email Address">
+                            <input id="email" type="email" name="Email Address" placeholder="Email Address" required>
                         </div>
                     </div>
                     <div class="lnna">
                         <div class="fna">
-                            <label for="fname" class="fn">Phone/Mobile</label>
+                            <label for="phone" class="fn">Phone</label>
                         </div>
                         <div class="fna1">
-                            <input type="text" name="fn" placeholder="0801 234 5678">
+                            <input id="phone" type="text" name="Phone Number" placeholder="0801 234 5678" required>
                         </div>
                     </div>
                 </div>
@@ -387,7 +388,7 @@
                     <div class="fna1">
                         <label for="country">Country</label>
         
-                        <select id="country" name="country" class="form-control">
+                        <select id="country" name="Country" class="form-control">
                 <option value="Afghanistan">Select Country</option>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Albania">Albania</option>
@@ -627,27 +628,27 @@
                 <div class="namee">
                     <div class="fnna">
                         <div class="fna">
-                            <label for="fname" class="fn">Number of Adult (12 years and above)</label>
+                            <label for="adults" class="fn">Number of Adult (12 years and above)</label>
                         </div>
                         <div class="fna1">
-                            <input type="text" name="fn" placeholder="Number of Adult">
+                            <input id="adults" type="text" name="Number of Adults" placeholder="Number of Adult" required>
                         </div>
                     </div>
                     <div class="lnna">
                         <div class="fna">
-                            <label for="fname" class="fn">Number of Children (2-12years)</label>
+                            <label for="children" class="fn">Number of Children (2-12years)</label>
                         </div>
                         <div class="fna1">
-                            <input type="text" name="fn" placeholder="Number of Children">
+                            <input id="children" type="text" name="Number of Children" placeholder="Number of Children" required>
                         </div>
                     </div>
                 </div>
                 <div class="fnna">
                     <div class="fna">
-                        <label for="fname" class="fn">Number of Infant (0-2years)</label>
+                        <label for="infants" class="fn">Number of Infant (0-2years)</label>
                     </div>
                     <div class="fna1">
-                        <input type="text" name="fn" class="infant" placeholder="Number of Infant">
+                        <input id="infants" type="text" name="Number of Infants" class="infant" placeholder="Number of Infant" required>
                     </div>
                 </div>
                 <h3>Passenger Details</h3>
@@ -655,28 +656,32 @@
                 <div class="namee">
                     <div class="fnna">
                         <div class="fna">
-                            <label for="fname" class="fn">Departure location(Abuja & Lagos)</label>
+                            <label for="depart" class="fn">Departure location(Abuja & Lagos)</label>
                         </div>
                         <div class="fna1">
-                            <input type="text" name="fn" placeholder="Location">
+                            <input id="depart" type="text" name="Location" placeholder="Location" required>
                         </div>
                     </div>
                     <div class="lnna">
                         <div class="fna">
-                            <label for="fname" class="fn">Return date</label>
+                            <label for="return" class="fn">Return date</label>
                         </div>
                         <div class="fna1">
-                            <input type="date" name="fn" placeholder="dd/mm/yyyy">
+                            <input id="return" type="date" name="Date" placeholder="dd/mm/yyyy" required>
                         </div>
                     </div>
                 </div>
                 <div class="fnna">
                     <div class="fna">
-                        <label for="fname" class="fn">Any additional information</label>
+                        <label for="additional" class="fn">Any additional information</label>
                     </div>
                     <div class="fna1">
-                        <textarea name="" id="any" placeholder="Any additional information"></textarea>   
+                        <textarea name="Additional Info" id="additional" placeholder="Any additional information"></textarea>   
                     </div>
+                </div>
+                <div class="loading-submit">
+                    <span class="loader"></span>
+                    <input type="submit" value="BOOK A SESSION" class="formSubmit">
                 </div>
             </form> 
         </div>

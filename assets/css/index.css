@@ -374,7 +374,7 @@ nav .navlink:hover {
     color: #8cca24;
   }
   .subheadline {
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     margin-bottom: 20px;
   }
@@ -386,6 +386,7 @@ nav .navlink:hover {
     .hero {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
     .pic{
         width: 750px;
@@ -421,7 +422,7 @@ nav .navlink:hover {
     background-color: red;
     width: 270px;
     height: 130px;
-    background-image: url(/assets/images/uk.jpg);
+    background-image: url(/assets/images/optimised/uk.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -451,7 +452,7 @@ nav .navlink:hover {
 }
 
 .half-2{
-    background-image: url(/assets/images/Dubai.jpeg);
+    background-image: url(/assets/images/optimised/Dubai.webp);
 }
 .halves{
     display: grid;
@@ -472,7 +473,7 @@ a {
     background-color: red;
     width: 270px;
     height: 130px;
-    background-image: url(/assets/images/cananda.jpg);
+    background-image: url(/assets/images/optimised/cananda.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -492,14 +493,14 @@ a {
     border-radius: 20px;
 }
 .quarter-2{ 
-    background-image: url(/assets/images/paris.jpg);
+    background-image: url(/assets/images/optimised/paris.webp);
 }
 .quarter-3{
-    background-image: url(/assets/images/turkey.jpg);
+    background-image: url(/assets/images/optimised/turkey.webp);
 }
 
 .quarter-4{
-    background-image: url(/assets/images/usa.jpg);
+    background-image: url(/assets/images/optimised/usa.webp);
 }
 @media screen and (min-width:700px) {
     .halves {
@@ -903,4 +904,15 @@ h4 {
     .main-service {
         height: 320px;
     }
+}
+
+
+/* .......................... */
+.constraint {
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+.max-w-500 {
+  max-width: 500px;
 }
